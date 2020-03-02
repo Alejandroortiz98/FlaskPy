@@ -10,3 +10,8 @@ alejandro.ortiz.bba@outlook.com
 
 pwd
 @lejandr098
+
+Recuerda el proceso
+    1.-Stage
+    2.-Commit
+    3.-Push
