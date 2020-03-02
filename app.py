@@ -1,6 +1,10 @@
-from flask import Flask
+from flask import Flask,render_template
 
 app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html') #Lo que sea que referencies aqui debe estar en la carpeta templates
 
 @app.route('/home/<string:name>') #<DataType:variableName>
 def hello(name): #si planeas usar la variable de arriba pss asegurate que lo de () este igual a lo de <>
