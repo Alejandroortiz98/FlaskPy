@@ -6,10 +6,10 @@ Im trying to learn Python-Flask
 https://stackoverflow.com/questions/46877667/how-to-push-a-new-initial-project-to-github-using-vs-code
 
 usr.
-alejandro.ortiz.bba@outlook.com
+bba
 
 pwd
-@lejandr098
+secondary
 
 Recuerda el proceso
     1.-Stage
