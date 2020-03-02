@@ -4,11 +4,13 @@
 <title>Posts</title>
 {% endblock %}
 
+
+
 {% block body %} 
 <h1>Post Page</h1>
 
     {% for post in posts %}
-        <h2>{{ post.title }}</h2> <!--Usar {{}} es para imprimir algo -->
+        <h2>{{ post.title }}</h2> {# Usar {{}} es para imprimir algo #}
         <p>{{ post.content }}</p>    
     {% endfor %}
 
