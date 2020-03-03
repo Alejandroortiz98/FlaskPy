@@ -1,6 +1,25 @@
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy #1.- import sql alchemy
+from datetime import datetime
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///posts.db' #2.- tell flask where tf is the DB
+#           ^ path to where DB is stored
+#           '///' relative path, o sea que esta dentro de la misma carpeta que app.py
+#           '////' absolute path, que si te tienes que meter a otra carpeta y la madre
+
+db = SQLAlchemy(app) #3.- create your database
+#4.- design your db
+
+class BlogPost(db.Model):
+    id = db.Column(db.Integer, primary_key=True) #primary key must always be unique
+    title =db.Column(db.String(100), nullable=False) #mullable = True can't be null
+    content =db.Column(db.Text, nullable=False)
+    author = db.Column(db.String(20), nullable=False, default='N/A')
+    date_posted=db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+
+    def __repr__(self):
+        return 'Blog Post '+ str(self.id)
 
 all_posts =[ #inicio diccionario de listas
     {
