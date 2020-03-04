@@ -10,4 +10,14 @@
 <h2>DOWNLOAD DIFFERENT LYNTER: pip install -U flake8</h2>
 <h2>CTRL+SHIFT+P y SELECCIONAS EL FLAKE 8</h2>
 <h3>Sauce: https://stackoverflow.com/questions/53975234/instance-of-sqlalchemy-has-no-column-member</h3>
+<p>Despues de instalar todo ese pedo vas a poner los siguientes comandos en la terminal de ahi abajito (Ctrl+Shift+Ñ)</p>
+<p>Python...para poder abrir como que la consola de Python</p>
+<p>from app import python...para que tome en cuenta el modelo que esta ahi dentro y haga la base de datos</p>
+<p>db.create_all()...eso deberia hacer que se creara el archivo de loa base de datos y aparecer en el mismo directorio que tu app.py</p>
+<p>from app import BlogPost...para importar el modelo</p>
+<p>BlogPost.query.all()...para imprimir todos los BlogPost en forma de lista, si no tiene nada (como es en este caso) arroja un []</p>
+<p>db.session.add(BlogPost())...ahi añades las cosas que quieras poner dentro de tu tabla, por ejemplo</p>
+<p>db.session.add(BlogPost(title='test', content='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',author='Alex')) </p>
+<p>Toma a consideracion que pues se tienen que poner las columnas que se hayan creado en la db</p>
+<p> y ya si poenmos BlogPost.query.all() deberia arrojar lo que tenemos en la funcion __repr__</p>
 {% endblock %}
