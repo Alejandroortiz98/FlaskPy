@@ -20,4 +20,7 @@
 <p>db.session.add(BlogPost(title='test', content='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',author='Alex')) </p>
 <p>Toma a consideracion que pues se tienen que poner las columnas que se hayan creado en la db</p>
 <p> y ya si poenmos BlogPost.query.all() deberia arrojar lo que tenemos en la funcion __repr__</p>
+<p>BlogPost.query.all()[0]...el 0 es la posicion de la lista, ese basicamente puede ser n</p>
+<p>BlogPost.query.all()[0].title ... la parte de title es solo el nombre de la columna y pues una vez mas puede ser cualquier columna de la db y pues lo imprime y asi</p>
+<p>bajo ese mismo criterio pues depende de que posicion pongas es lo que se imprime</p>
 {% endblock %}
